@@ -1,25 +1,26 @@
 #include "main.h"
 
 /**
- * get_size - used to calculate the size in bytes that
- * a data type occupies
- * @format: formatted string in which arguments are printed
- * @f: list of arguments
- * Return: precision
+ * get_size - Calculates the size to cast the argument
+ * @format: Formatted string in which to print the arguments
+ * @i: List of arguments to be printed.
+ *
+ * Return: Precision.
  */
-int get_size(const char *format, int *f)
+int get_size(const char *format, int *i)
 {
-	int curr_f = *f + 1;
+	int curr_i = *i + 1;
 	int size = 0;
 
-	if (format[curr_f] == 'l')
+	if (format[curr_i] == 'l')
 		size = S_LONG;
-	else if (format[curr_f] == 'h')
+	else if (format[curr_i] == 'h')
 		size = S_SHORT;
 
 	if (size == 0)
-		*f = curr_f - 1;
+		*i = curr_i - 1;
 	else
-		*f = curr_f;
+		*i = curr_i;
+
 	return (size);
 }
