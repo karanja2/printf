@@ -32,4 +32,4 @@ int _validate_char(char _type) Gets a type and checks if the passed parameter is
 
 Return Value Upon successful return, the _printf() function return the number of characters printed (excluding the null byte used to end output to strings). If an output error is encountered, a negative value is returned.
 
-Author _printf() is written and maintained by ian karanja and MESHACK NZUVA
+Author _printf() is written and maintained by ian karanja and fortunate mugendi
